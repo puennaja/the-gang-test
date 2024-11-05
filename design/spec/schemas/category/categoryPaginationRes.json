@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "response pagination of category from the server",
+  "required": ["limit", "page", "total_rows", "total_pages", "rows"],
+  "properties": {
+    "limit": {
+      "type": "integer",
+      "description": "pagination limit"
+    },
+    "page": {
+      "type": "integer",
+      "description": "pagination page"
+    },
+    "total_rows": {
+      "type": "integer",
+      "description": "pagination total data row"
+    },
+    "total_pages": {
+      "type": "integer",
+      "description": "pagination total data page"
+    },
+    "rows": {
+      "type": "array",
+      "description": "response list of data",
+      "items": {
+        "$ref": "./category.json"
+      }
+    }
+  },
+  "example": {
+    "limit": 1,
+    "page": 1,
+    "total_rows": 1,
+    "total_pages": 1,
+    "rows": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "Category Name",
+        "created_at": "2019-01-01T00:00:00Z",
+        "is_private": false,
+        "is_deleted": false
+      }
+    ]
+  }
+}

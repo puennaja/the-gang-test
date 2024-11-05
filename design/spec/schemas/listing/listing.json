@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "description": "listing object from the server",
+  "required": [
+    "listing_id",
+    "user_id",
+    "user_name",
+    "category_id",
+    "category_name",
+    "title",
+    "content",
+    "picture",
+    "created_at",
+    "updated_at",
+    "is_private"
+  ],
+  "properties": {
+    "listing_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "category_id": {
+      "type": "string"
+    },
+    "category_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "array",
+      "description": "optional",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "is_hide": {
+      "type": "boolean",
+      "description": "optional"
+    },
+    "is_private": {
+      "type": "boolean",
+      "description": "optional"
+    },
+    "is_deleted": {
+      "type": "boolean",
+      "description": "optional"
+    }
+  },
+  "example": {
+    "listing_id": "00000000-0000-0000-0000-000000000000",
+    "user_id": "00000000-0000-0000-0000-000000000000",
+    "user_name": "User Name",
+    "category_id": "00000000-0000-0000-0000-000000000000",
+    "category_name": "Category Name",
+    "title": "Title",
+    "content": "Content",
+    "picture": ["http://localhost/path/to/image.png"],
+    "created_at": "2022-05-06T09:52:47.032+00:00",
+    "updated_at": "2022-05-06T09:52:47.032+00:00",
+    "is_private": false
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "description": "listing object from the server",
+  "required": [
+    "listing_id",
+    "category_id",
+    "category_name",
+    "title",
+    "content",
+    "picture",
+    "is_private"
+  ],
+  "properties": {
+    "listing_id": {
+      "type": "string"
+    },
+    "category_id": {
+      "type": "string"
+    },
+    "category_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "array",
+      "description": "optional",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_private": {
+      "type": "boolean",
+      "description": "optional"
+    }
+  },
+  "example": {
+    "listing_id": "00000000-0000-0000-0000-000000000000",
+    "category_id": "00000000-0000-0000-0000-000000000000",
+    "category_name": "Category Name",
+    "title": "Title",
+    "content": "Content",
+    "picture": ["http://localhost/path/to/image.png"],
+    "is_private": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "description": "reply object from the server",
+  "required": ["user_id", "user_name", "message", "created_at"],
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "example": {
+    "user_id": "00000000-0000-0000-0000-000000000000",
+    "user_name": "User Name",
+    "message": "Reply Message",
+    "created_at": "2020-01-01T00:00:00Z"
+  }
+}

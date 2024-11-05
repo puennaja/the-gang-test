@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "description": "request to delete listing object",
+  "required": ["listing_id"],
+  "properties": {
+    "listing_id": {
+      "type": "string"
+    }
+  },
+  "example": {
+    "listing_id": "00000000-0000-0000-0000-000000000000"
+  }
+}

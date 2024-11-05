@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "description": "pv message object from the server",
+  "required": [
+    "sender_id",
+    "sender_name",
+    "reciver_id",
+    "reciver_name",
+    "message",
+    "created_at"
+  ],
+  "properties": {
+    "sender_id": {
+      "type": "string"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "reciver_id": {
+      "type": "string"
+    },
+    "reciver_name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "example": {
+    "sender_id": "00000000-0000-0000-0000-000000000000",
+    "sender_name": "Sender Name",
+    "reciver_id": "00000000-0000-0000-0000-000000000000",
+    "reciver_name": "Reciver Name",
+    "message": "PV Message",
+    "created_at": "2020-01-01T00:00:00Z"
+  }
+}

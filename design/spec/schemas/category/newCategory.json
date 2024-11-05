@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["name", "is_private"],
+  "description": "request to create category object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "is_private": {
+      "type": "boolean"
+    }
+  },
+  "example": {
+    "name": "Category Name",
+    "is_private": false
+  }
+}

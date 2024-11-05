@@ -1,0 +1,9 @@
+{
+  "name": "x-user-name",
+  "in": "header",
+  "description": "user name",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

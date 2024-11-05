@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "description": "request to create messsage object",
+  "required": ["reciver_id", "reciver_name", "message"],
+  "properties": {
+    "reciver_id": {
+      "type": "string"
+    },
+    "reciver_name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "example": {
+    "reciver_id": "00000000-0000-0000-0000-000000000000",
+    "reciver_name": "Reciver Name",
+    "message": "Message"
+  }
+}

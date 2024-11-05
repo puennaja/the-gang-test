@@ -1,0 +1,13 @@
+{
+  "name": "x-user-id",
+  "in": "header",
+  "description": "user role",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "x-go-type": "uuid.UUID",
+    "x-go-type-import": {
+      "import": "github.com/google/uuid"
+    }
+  }
+}

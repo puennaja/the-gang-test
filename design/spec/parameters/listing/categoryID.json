@@ -1,0 +1,8 @@
+{
+  "name": "category_id",
+  "in": "query",
+  "description": "category",
+  "schema": {
+    "type": "string"
+  }
+}

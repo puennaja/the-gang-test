@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "required": ["id", "name", "created_at", "is_private", "is_deleted"],
+  "description": "response category object from the server",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "is_private": {
+      "type": "boolean"
+    },
+    "is_deleted": {
+      "type": "boolean"
+    }
+  },
+  "example": {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "Category Name",
+    "created_at": "2019-01-01T00:00:00Z",
+    "is_private": false,
+    "is_deleted": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "listing_id",
+  "in": "path",
+  "description": "listing id",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

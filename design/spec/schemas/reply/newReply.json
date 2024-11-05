@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "description": "request to create reply ",
+  "required": ["listing_id", "message"],
+  "properties": {
+    "message": {
+      "type": "string"
+    }
+  },
+  "example": {
+    "message": "Reply Message"
+  }
+}

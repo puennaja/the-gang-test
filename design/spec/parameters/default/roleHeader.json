@@ -1,0 +1,9 @@
+{
+  "name": "x-user-role",
+  "in": "header",
+  "description": "user role",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

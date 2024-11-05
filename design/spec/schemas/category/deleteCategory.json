@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "required": ["id"],
+  "description": "request to delete category",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  },
+  "example": {
+    "id": "00000000-0000-0000-0000-000000000000"
+  }
+}

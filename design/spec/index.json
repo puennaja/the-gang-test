@@ -1,0 +1,544 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "DavesList API",
+    "description": "DavesList API"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8001"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Category"
+    },
+    {
+      "name": "Listing"
+    },
+    {
+      "name": "Message"
+    }
+  ],
+  "paths": {
+    "/api/v1/category": {
+      "get": {
+        "tags": ["Category"],
+        "summary": "get category data list",
+        "description": "get category data list",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          },
+          {
+            "$ref": "./parameters/pagination/Limit.json"
+          },
+          {
+            "$ref": "./parameters/pagination/Page.json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "./responses/category/cetegoryPaginationResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Category"],
+        "summary": "new category",
+        "description": "create new category",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./schemas/category/newCategory.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "./responses/category/cetegoryResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Category"],
+        "summary": "delete category",
+        "description": "delete category",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./schemas/category/deleteCategory.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "./responses/category/cetegoryResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      }
+    },
+    "/api/v1/listing": {
+      "get": {
+        "tags": ["Listing"],
+        "summary": "get listing data list",
+        "description": "get listing data list",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          },
+          {
+            "$ref": "./parameters/pagination/Limit.json"
+          },
+          {
+            "$ref": "./parameters/pagination/Page.json"
+          },
+          {
+            "$ref": "./parameters/listing/categoryID.json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "./responses/listing/listingPaginationResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Listing"],
+        "summary": "new listing",
+        "description": "create new listing",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./schemas/listing/newListing.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "./responses/listing/listingResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Listing"],
+        "summary": "update listing",
+        "description": "update listing",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./schemas/listing/updateListing.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "./responses/listing/listingResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Listing"],
+        "summary": "delete listing",
+        "description": "delete listing",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./schemas/listing/deleteListing.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "./responses/listing/listingResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      }
+    },
+    "/api/v1/listing/{listing_id}/hide": {
+      "patch": {
+        "tags": ["Listing"],
+        "summary": "patch listing",
+        "description": "patch listing",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          },
+          {
+            "$ref": "./parameters/listing/listingIDPath.json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "./responses/listing/listingResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      }
+    },
+    "/api/v1/listing/{listing_id}/reply": {
+      "get": {
+        "tags": ["Listing"],
+        "summary": "get reply data list",
+        "description": "get reply data list",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          },
+          {
+            "$ref": "./parameters/pagination/Limit.json"
+          },
+          {
+            "$ref": "./parameters/pagination/Page.json"
+          },
+          {
+            "$ref": "./parameters/listing/listingIDPath.json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "./responses/reply/replyPaginationResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Listing"],
+        "summary": "new reply",
+        "description": "create new reply",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          },
+          {
+            "$ref": "./parameters/listing/listingIDPath.json"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./schemas/reply/newReply.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "./responses/reply/replyResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      }
+    },
+    "/api/v1/message": {
+      "get": {
+        "tags": ["Message"],
+        "summary": "get message data list",
+        "description": "get message data list",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          },
+          {
+            "$ref": "./parameters/pagination/Limit.json"
+          },
+          {
+            "$ref": "./parameters/pagination/Page.json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "./responses/message/messagePaginationResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Message"],
+        "summary": "new message",
+        "description": "create new message",
+        "parameters": [
+          {
+            "$ref": "./parameters/default/userIDHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/userNameHeader.json"
+          },
+          {
+            "$ref": "./parameters/default/roleHeader.json"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./schemas/message/newMessage.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "./responses/message/messageResponse.json"
+          },
+          "400": {
+            "$ref": "./responses/error/error.json"
+          },
+          "401": {
+            "$ref": "./responses/error/error.json"
+          },
+          "403": {
+            "$ref": "./responses/error/error.json"
+          },
+          "500": {
+            "$ref": "./responses/error/error.json"
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "security": [
+    {
+      "ApiKey": []
+    }
+  ]
+}
